@@ -6,7 +6,8 @@
 //  Copyright 2010 Jeffrey Drake. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Stellar_Masters_Prefix.pch"
+
 #import "StarMapView.h"
 
 @interface StarMapController : UIViewController {

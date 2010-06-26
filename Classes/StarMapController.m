@@ -21,10 +21,12 @@
 //	CGRect r = [[[AppDelegate sharedAppDelegate] window] bounds];
 	CGRect starsize = CGRectMake(0, 0, 2048, 2048);
 	
-	self.starmap.scrollView.bounds = starsize;
+	self.starmap.scrollView.contentSize = starsize.size;
 	self.starmap.frame = starsize;
 	
 	[self.starmap setNeedsDisplay];
+	
+	self.starmap.mapSize = CGSizeMake(12, 12);
 	
 }
 

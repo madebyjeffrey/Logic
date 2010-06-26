@@ -6,7 +6,8 @@
 //  Copyright Jeffrey Drake 2010. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Stellar_Masters_Prefix.pch"
+
 #import "SynthesizeSingleton.h"
 #import "StarMapController.h"
 

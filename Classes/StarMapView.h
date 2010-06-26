@@ -6,13 +6,16 @@
 //  Copyright 2010 Jeffrey Drake. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Stellar_Masters_Prefix.pch"
 
 
 @interface StarMapView : UIView {
 	IBOutlet UIScrollView *scrollView;
+	CGSize gridSize;
+	CGSize mapSize;
 }
 
 @property (retain) IBOutlet UIScrollView *scrollView;
-
+@property (assign) CGSize gridSize;
+@property (assign) CGSize mapSize;
 @end
