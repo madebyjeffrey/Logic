@@ -1,24 +1,36 @@
 //
-//  Stellar_MastersAppDelegate.h
-//  Stellar Masters
+//  AppDelegate.h
+//  Logical
 //
 //  Created by Jeffrey Drake on 10-06-15.
 //  Copyright Jeffrey Drake 2010. All rights reserved.
 //
 
-#import "Stellar_Masters_Prefix.pch"
+#import "Logical_Prefix.pch"
 
 #import "SynthesizeSingleton.h"
-#import "StarMapController.h"
+#import "GridController.h"
+#import "Components.h"
+/*
+@protocol Sidebar
+
+- (int) minWidth;
+- (int) minHeight;
+
+@end
+*/
 
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	StarMapController *starmap;
+	GridController *canvas;
+	Components *components;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) 	StarMapController *starmap;
+@property (nonatomic, retain) GridController *canvas;
+@property (nonatomic, retain) Components *components;
 
 + (AppDelegate*) sharedAppDelegate;
+- (void) arrangeSubviews;
 @end
 

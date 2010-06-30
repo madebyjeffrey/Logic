@@ -1,12 +1,12 @@
 //
 //  main.m
-//  Stellar Masters
+//  Logical
 //
 //  Created by Jeffrey Drake on 10-06-15.
 //  Copyright Jeffrey Drake 2010. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Logical_Prefix.pch"
 
 int main(int argc, char *argv[]) {
     

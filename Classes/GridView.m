@@ -1,26 +1,44 @@
 //
-//  StarMapView.m
-//  Stellar Masters
+//  GridView.m
+//  Logical
 //
 //  Created by Jeffrey Drake on 10-06-15.
 //  Copyright 2010 Jeffrey Drake. All rights reserved.
 //
 
-#import "StarMapView.h"
+#import "GridView.h"
 
 
 
-@implementation StarMapView
+@implementation GridView
 
-@synthesize scrollView, gridSize;
+@synthesize scrollView, gridSize, gridColour;
 
-@dynamic mapSize;
+@dynamic mapSize, backgroundColour;
 
 - (void) awakeFromNib
 {
-	[self setBackgroundColor: [UIColor blackColor]];
+	self.backgroundColour = [UIColor colorWithRed: 208/255.0f 
+											green: 208/255.0f 
+											 blue: 208/255.0f 
+											alpha: 1.0f];
+	self.gridColour = [UIColor colorWithRed: 187/255.0f
+									  green: 187/255.0f 
+									   blue: 187/255.0f 
+									  alpha: 1.0f];
+	
 	[self setNeedsDisplay];
-	self.gridSize = CGSizeMake(128, 128);
+	self.gridSize = CGSizeMake(32, 32);
+}
+
+- (UIColor*) backgroundColour
+{
+	return self.backgroundColor;
+}
+
+- (void) setBackgroundColour:(UIColor *)c
+{
+	self.backgroundColor = c;
 }
 
 - (void) setMapSize:(CGSize) sz
@@ -55,7 +73,7 @@
 
 	
 	// définir la couleur du crayon
-	CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
+	CGContextSetStrokeColorWithColor(context, self.gridColour.CGColor);
 	
 	// définir la largeur de plume
 	CGContextSetLineWidth(context, 2.0);

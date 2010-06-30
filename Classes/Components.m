@@ -1,34 +1,32 @@
     //
-//  StarMap.m
-//  Stellar Masters
+//  Components.m
+//  Logical
 //
-//  Created by Jeffrey Drake on 10-06-15.
+//  Created by Jeffrey Drake on 10-06-30.
 //  Copyright 2010 Jeffrey Drake. All rights reserved.
 //
 
-#import "StarMapController.h"
-#import "AppDelegate.h"
+#import "Components.h"
 
 
-@implementation StarMapController
-@synthesize starmap;
+@implementation Components
 
+/*
+ // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+        // Custom initialization
+    }
+    return self;
+}
+*/
 
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-//	CGRect r = [[[AppDelegate sharedAppDelegate] window] bounds];
-	CGRect starsize = CGRectMake(0, 0, 2048, 2048);
-	
-	self.starmap.scrollView.contentSize = starsize.size;
-	self.starmap.frame = starsize;
-	
-	[self.starmap setNeedsDisplay];
-	
-	self.starmap.mapSize = CGSizeMake(12, 12);
-	
 }
+*/
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -56,5 +54,14 @@
     [super dealloc];
 }
 
+- (int) minWidth
+{
+	return _and.frame.size.width * 2;
+}
+
+- (int) minHeight
+{
+	return _and.frame.size.height * 2;
+}
 
 @end
