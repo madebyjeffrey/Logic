@@ -19,14 +19,18 @@
     [super viewDidLoad];
 	
 //	CGRect r = [[[AppDelegate sharedAppDelegate] window] bounds];
-	CGRect canvas_size = CGRectMake(0, 0, 8192, 8192);
+	CGRect canvas_size = CGRectMake(0, 0, 1600, 2200);
+	
 	CGPoint screen = {[UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height};
 
+	self.canvas.frame = canvas_size;
+	
 	self.canvas.scrollView.contentSize = canvas_size.size;
 	self.canvas.scrollView.contentOffset = CGPointMake(canvas_size.size.width/2-screen.x/2, 
 													   canvas_size.size.height/2-screen.y/2);
 
-	self.canvas.frame = canvas_size;
+
+	
 	
 	[self.canvas setNeedsDisplay];
 	
@@ -38,7 +42,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-//	NSLog(@"contentOffset: { %f, %f }", self.canvas.scrollView.contentOffset.x, self.canvas.scrollView.contentOffset.y);
+	NSLog(@"contentOffset: { %f, %f }", self.canvas.scrollView.contentOffset.x, self.canvas.scrollView.contentOffset.y);
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
