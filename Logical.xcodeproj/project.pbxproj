@@ -13,12 +13,17 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		8A09DB6811EEB3500079B0C7 /* PartSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A09DB6711EEB3500079B0C7 /* PartSwitch.m */; };
+		8A09DB7911EEBB020079B0C7 /* PartAND.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A09DB7811EEBB020079B0C7 /* PartAND.m */; };
 		8A0BF74711DAFCA70065BF45 /* Grid.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0BF74611DAFCA70065BF45 /* Grid.xib */; };
 		8A0BF74C11DAFCB20065BF45 /* GridController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF74911DAFCB20065BF45 /* GridController.m */; };
 		8A0BF74D11DAFCB20065BF45 /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF74B11DAFCB20065BF45 /* GridView.m */; };
 		8A0BF7E911DB08FF0065BF45 /* Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF7E711DB08FF0065BF45 /* Components.m */; };
 		8A0BF7EA11DB08FF0065BF45 /* Components.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0BF7E811DB08FF0065BF45 /* Components.xib */; };
-		8A0BF80D11DB119F0065BF45 /* Component.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF80C11DB119F0065BF45 /* Component.m */; };
+		8A0BF80D11DB119F0065BF45 /* Part.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0BF80C11DB119F0065BF45 /* Part.m */; };
+		8A12462411ED4ADC00975AE7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A12462311ED4ADC00975AE7 /* CoreText.framework */; };
+		8A53577911DDAB3E00E66C9F /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A53577811DDAB3E00E66C9F /* Colours.m */; };
+		8A6FD00111E2C1ED0028C2E3 /* GridScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6FD00011E2C1ED0028C2E3 /* GridScrollView.m */; };
 		8AA5CFCB11D5994E0072F787 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA5CFCA11D5994E0072F787 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,10 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A09DB6611EEB3500079B0C7 /* PartSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartSwitch.h; sourceTree = "<group>"; };
+		8A09DB6711EEB3500079B0C7 /* PartSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartSwitch.m; sourceTree = "<group>"; };
+		8A09DB7711EEBB020079B0C7 /* PartAND.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartAND.h; sourceTree = "<group>"; };
+		8A09DB7811EEBB020079B0C7 /* PartAND.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartAND.m; sourceTree = "<group>"; };
 		8A0BF74111DAFC920065BF45 /* Logical-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Logical-Info.plist"; sourceTree = "<group>"; };
 		8A0BF74311DAFC9A0065BF45 /* Logical_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logical_Prefix.pch; sourceTree = "<group>"; };
 		8A0BF74611DAFCA70065BF45 /* Grid.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Grid.xib; sourceTree = "<group>"; };
@@ -41,9 +50,14 @@
 		8A0BF7E611DB08FF0065BF45 /* Components.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Components.h; sourceTree = "<group>"; };
 		8A0BF7E711DB08FF0065BF45 /* Components.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Components.m; sourceTree = "<group>"; };
 		8A0BF7E811DB08FF0065BF45 /* Components.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Components.xib; path = Classes/Components.xib; sourceTree = "<group>"; };
-		8A0BF80B11DB119F0065BF45 /* Component.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Component.h; sourceTree = "<group>"; };
-		8A0BF80C11DB119F0065BF45 /* Component.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Component.m; sourceTree = "<group>"; };
+		8A0BF80B11DB119F0065BF45 /* Part.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Part.h; sourceTree = "<group>"; };
+		8A0BF80C11DB119F0065BF45 /* Part.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Part.m; sourceTree = "<group>"; };
+		8A12462311ED4ADC00975AE7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8A53577711DDAB3E00E66C9F /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Colours.h; path = Classes/Colours.h; sourceTree = "<group>"; };
+		8A53577811DDAB3E00E66C9F /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Colours.m; path = Classes/Colours.m; sourceTree = "<group>"; };
 		8A59ADF211C807E600BDBF8C /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
+		8A6FCFFF11E2C1ED0028C2E3 /* GridScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridScrollView.h; path = Classes/GridScrollView.h; sourceTree = "<group>"; };
+		8A6FD00011E2C1ED0028C2E3 /* GridScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridScrollView.m; path = Classes/GridScrollView.m; sourceTree = "<group>"; };
 		8AA5CFCA11D5994E0072F787 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -56,6 +70,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				8AA5CFCB11D5994E0072F787 /* QuartzCore.framework in Frameworks */,
+				8A12462411ED4ADC00975AE7 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,16 +80,9 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1D3623240D0F684500981E51 /* AppDelegate.h */,
-				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				8A0BF74811DAFCB20065BF45 /* GridController.h */,
-				8A0BF74911DAFCB20065BF45 /* GridController.m */,
-				8A0BF74A11DAFCB20065BF45 /* GridView.h */,
-				8A0BF74B11DAFCB20065BF45 /* GridView.m */,
-				8A0BF7E611DB08FF0065BF45 /* Components.h */,
-				8A0BF7E711DB08FF0065BF45 /* Components.m */,
-				8A0BF80B11DB119F0065BF45 /* Component.h */,
-				8A0BF80C11DB119F0065BF45 /* Component.m */,
+				8A09DB5111EEB19D0079B0C7 /* App */,
+				8A09DB4F11EEB13B0079B0C7 /* Parts */,
+				8A09DB4E11EEB12B0079B0C7 /* Canvas */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -91,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				8A09DB5011EEB1880079B0C7 /* Defunct */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -102,6 +111,9 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8A09DB5211EEB1AA0079B0C7 /* Utility */,
+				8A53577711DDAB3E00E66C9F /* Colours.h */,
+				8A53577811DDAB3E00E66C9F /* Colours.m */,
 				8A0BF74311DAFC9A0065BF45 /* Logical_Prefix.pch */,
 				8A59ADF211C807E600BDBF8C /* SynthesizeSingleton.h */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
@@ -123,12 +135,65 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A12462311ED4ADC00975AE7 /* CoreText.framework */,
 				8AA5CFCA11D5994E0072F787 /* QuartzCore.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A09DB4E11EEB12B0079B0C7 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				8A0BF74811DAFCB20065BF45 /* GridController.h */,
+				8A0BF74911DAFCB20065BF45 /* GridController.m */,
+				8A0BF74A11DAFCB20065BF45 /* GridView.h */,
+				8A0BF74B11DAFCB20065BF45 /* GridView.m */,
+			);
+			name = Canvas;
+			sourceTree = "<group>";
+		};
+		8A09DB4F11EEB13B0079B0C7 /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				8A0BF80B11DB119F0065BF45 /* Part.h */,
+				8A0BF80C11DB119F0065BF45 /* Part.m */,
+				8A09DB6611EEB3500079B0C7 /* PartSwitch.h */,
+				8A09DB6711EEB3500079B0C7 /* PartSwitch.m */,
+				8A09DB7711EEBB020079B0C7 /* PartAND.h */,
+				8A09DB7811EEBB020079B0C7 /* PartAND.m */,
+			);
+			name = Parts;
+			sourceTree = "<group>";
+		};
+		8A09DB5011EEB1880079B0C7 /* Defunct */ = {
+			isa = PBXGroup;
+			children = (
+				8A0BF7E611DB08FF0065BF45 /* Components.h */,
+				8A0BF7E711DB08FF0065BF45 /* Components.m */,
+			);
+			name = Defunct;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8A09DB5111EEB19D0079B0C7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* AppDelegate.h */,
+				1D3623250D0F684500981E51 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		8A09DB5211EEB1AA0079B0C7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8A6FCFFF11E2C1ED0028C2E3 /* GridScrollView.h */,
+				8A6FD00011E2C1ED0028C2E3 /* GridScrollView.m */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +256,11 @@
 				8A0BF74C11DAFCB20065BF45 /* GridController.m in Sources */,
 				8A0BF74D11DAFCB20065BF45 /* GridView.m in Sources */,
 				8A0BF7E911DB08FF0065BF45 /* Components.m in Sources */,
-				8A0BF80D11DB119F0065BF45 /* Component.m in Sources */,
+				8A0BF80D11DB119F0065BF45 /* Part.m in Sources */,
+				8A53577911DDAB3E00E66C9F /* Colours.m in Sources */,
+				8A6FD00111E2C1ED0028C2E3 /* GridScrollView.m in Sources */,
+				8A09DB6811EEB3500079B0C7 /* PartSwitch.m in Sources */,
+				8A09DB7911EEBB020079B0C7 /* PartAND.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

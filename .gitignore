@@ -1,3 +1,4 @@
-Build/
-Logical.xcodeproj/iaefai.pbxuser
-Logical.xcodeproj/iaefai.mode1v3
+build/
+*.xcodeproj/*.mode1v3
+*.xcodeproj/*.mode2v3
+*.xcodeproj/*.pbxuser

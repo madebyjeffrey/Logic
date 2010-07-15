@@ -21,12 +21,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppDelegate)
 	[window makeKeyAndVisible];
 	
 	canvas = [[GridController alloc] initWithNibName: @"Grid" bundle: nil];
-	components = [[Components alloc] initWithNibName: @"Components" bundle:nil];
+//	components = [[Components alloc] initWithNibName: @"Components" bundle:nil];
 	
 	[window addSubview: [canvas view]];
-	[window addSubview: [components view]];
+//	[window addSubview: [components view]];
 	
-	[self arrangeSubviews];
+//	[self arrangeSubviews];
 
 	
     return YES;
@@ -50,7 +50,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppDelegate)
 	// Move Component into top spot
 	components.view.frame = sidebar;
 	// Move Canvas into bottom spot
-	canvas.view.frame = body;
+	canvas.view.frame =  body;
+	
+//	body.origin.y = 0;
+	canvas.canvas.scrollView.frame = canvas.view.bounds;
 }
 
 - (void)dealloc {
@@ -63,21 +66,4 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(AppDelegate)
 
 @end
 
-@implementation UIColor(Custom)
-
-+ (UIColor*) prussianBlue
-{
-	return [UIColor colorWithHue: 205/360.0 saturation: 1.0 brightness: 0.43 alpha: 1.0];
-}
-
-+ (UIColor*) egyptianBlue
-{
-	return [UIColor colorWithHue: 244/360.0 saturation: 0.77 brightness: 0.42 alpha: 1.0];
-}
-
-+ (UIColor*) malachite
-{
-	return [UIColor colorWithHue: 99/360.0 saturation: 0.37 brightness: 0.62 alpha: 1.0];
-}
-@end
 

@@ -8,4 +8,7 @@
 
 	#import <CoreGraphics/CoreGraphics.h>
 	#import <QuartzCore/QuartzCore.h>
+	#import <CoreText/CoreText.h>
+
+	#import "Colours.h"
 #endif

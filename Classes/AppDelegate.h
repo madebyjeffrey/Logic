@@ -20,11 +20,7 @@
 @end
 */
 
-@interface UIColor(Custom)
-+ (UIColor*) prussianBlue;
-+ (UIColor*) egyptianBlue;
-+ (UIColor*) malachite;
-@end
+
 
 
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
