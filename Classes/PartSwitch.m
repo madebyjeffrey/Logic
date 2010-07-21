@@ -15,7 +15,7 @@
 
 - (CGSize) partSize
 {
-	return CGSizeMake(3.0, 3.0);
+	return CGSizeMake(3.0, 1.0);
 }
 
 + (PartSwitch*) part
@@ -30,7 +30,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
-		switch1 = [[UISwitch alloc] initWithFrame: CGRectMake(1, 1, 0, 0)]; // ignores size
+		switch1 = [[CustomUISwitch alloc] initWithFrame: CGRectMake(1, 1, 0, 0) imagePrefix: @"NC"]; // ignores size
 		switch1.center = CGPointMake([self bounds].size.width / 2 + [self bounds].origin.x,
 									 [self bounds].size.height / 2 + [self bounds].origin.y);
 		
@@ -42,8 +42,7 @@
 
 - (BOOL) handlesTouchesForView: (UIView*) view
 {
-	if (view == switch1)
-		return YES;
+//	return (view == switch1);
 	return NO;
 }
 - (void) adjustedFrame

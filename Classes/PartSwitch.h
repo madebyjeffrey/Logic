@@ -8,13 +8,15 @@
 
 #import "Logical_Prefix.pch"
 
+#import "CustomUISwitch.h"
+
 #import "Part.h"
 
 @interface PartSwitch : Part {
-	UISwitch *switch1;
+	CustomUISwitch *switch1;
 }
 
-@property (retain, nonatomic) UISwitch *switch1;
+@property (retain, nonatomic) CustomUISwitch *switch1;
 
 + (PartSwitch*) part;
 @end

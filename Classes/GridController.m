@@ -35,7 +35,7 @@
 	panGesture.delegate = self;
 	panGesture.maximumNumberOfTouches = 1;
 	panGesture.minimumNumberOfTouches = 1;
-	panGesture.cancelsTouchesInView = NO;
+	panGesture.cancelsTouchesInView = YES;
 	
 	[self.canvas.comp1 addGestureRecognizer: panGesture];
 	
@@ -75,21 +75,27 @@
 	if (sender.state == UIGestureRecognizerStateEnded)
 	{
 		CGPoint topleft = newFrame.origin;
+		CGPoint velocity = [sender velocityInView: self.canvas];
 		
-		topleft.x -= self.canvas.borderPadding.width;
-		topleft.y -= self.canvas.borderPadding.height;
+		NSLog(@"Velocity %f,%f", velocity.x, velocity.y);
+		topleft.x += velocity.x * 0.1;
+		topleft.y += velocity.y * 0.1;
 		
-		topleft.x -= fmod(topleft.x, self.canvas.gridSize.width);
-		topleft.y -= fmod(topleft.y, self.canvas.gridSize.height);
+		CGPoint delta;
 		
-		topleft.x += self.canvas.borderPadding.width;
-		topleft.y += self.canvas.borderPadding.height;
+		delta.x = fmod(topleft.x - self.canvas.borderPadding.width, self.canvas.gridSize.width);
+		delta.y = fmod(topleft.y - self.canvas.borderPadding.height, self.canvas.gridSize.height);
+		
+		topleft.x += (delta.x < self.canvas.gridSize.width/2 ? -delta.x : self.canvas.gridSize.width-delta.x);
+		topleft.y += (delta.y < self.canvas.gridSize.height/2 ? -delta.y : self.canvas.gridSize.height-delta.y);		
 		
 		CGPoint centre = topleft;
 		centre.x += self.canvas.comp1.frame.size.width/2 + 1;
 		centre.y += self.canvas.comp1.frame.size.height/2;
 		
 		[UIView beginAnimations: @"SnapComponent" context: nil];
+		[UIView setAnimationDuration: 0.125];
+		[UIView setAnimationCurve: UIViewAnimationCurveLinear];
 		
 		self.canvas.comp1.center = centre;
 		
